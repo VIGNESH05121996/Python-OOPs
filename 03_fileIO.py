@@ -20,13 +20,15 @@ class OpenAndReadAllFileLines:
         try:
             with open(self.file_path, "r") as file: #this can also be written as file=open(self.file_path, "r")
                 print(file.read())  # reads all lines
+                file.close()
         except FileNotFoundError:
             print("Error: The file 'paragraph.txt' was not found.")
 
     def readFileLines(self):
         try:
             with open(self.file_path, "r") as file:
-                print(file.readlines()) 
+                print(file.readlines())
+                file.close() 
         except FileNotFoundError:
             print("Error: The file 'paragraph.txt' was not found.")
 
@@ -34,6 +36,7 @@ class OpenAndReadAllFileLines:
         try:
             with open(self.file_path, "r") as file:
                 print(file.readline(10)) # reads the number of characters
+                file.close()
         except FileNotFoundError:
             print("Error: The file 'paragraph.txt' was not found.")
 
@@ -41,6 +44,7 @@ class OpenAndReadAllFileLines:
         try:
             with open(self.file_path, "rb") as file: # reads the file in binary
                 print(file.read()) 
+                file.close()
         except FileNotFoundError:
             print("Error: The file 'paragraph.txt' was not found.")
 
@@ -48,6 +52,7 @@ class OpenAndReadAllFileLines:
         try:
             with open(self.file_path, "a") as file: # append new text
                 file.write("Added additional Text")
+                file.close()
         except FileNotFoundError:
             print("Error: The file 'paragraph.txt' was not found.")
 
@@ -55,6 +60,7 @@ class OpenAndReadAllFileLines:
         try:
             with open(self.new_file_path, "x") as file: # create new file
                 file.write("Added additional Text")
+                file.close()
         except FileNotFoundError:
             print("Error: The file 'paragraph.txt' was not found.")
 
@@ -62,6 +68,7 @@ class OpenAndReadAllFileLines:
         try:
             with open(self.new_file_path, "w") as file: # over writes
                 file.write("This is update text")
+                file.close()
         except FileNotFoundError:
             print("Error: The file 'paragraph.txt' was not found.")
 
