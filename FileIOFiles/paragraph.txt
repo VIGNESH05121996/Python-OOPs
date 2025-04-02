@@ -1,0 +1,1 @@
+In Python, file I/O (Input/Output) refers to reading from and writing to files using built-in functions.Added additional TextAdded additional TextAdded additional Text
